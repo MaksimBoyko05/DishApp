@@ -1,0 +1,24 @@
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button{
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    transform: translateY(-2px);
+  }
+  &:disabled{
+    border: 1px solid #999999;
+    background-color: #e0e0e0;
+    color: #666666;
+    cursor: not-allowed;
+  }
+}

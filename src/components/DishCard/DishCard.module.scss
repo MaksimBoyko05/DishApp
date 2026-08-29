@@ -1,0 +1,33 @@
+@use '../../styles/mixins' as m;
+.dish__card{
+ @include m.flex-center;
+  @include m.flex-column;
+  position: relative;
+  max-width: 565px;
+  background: #ffffff;
+  padding: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 16px;
+  gap: 16px;
+  img{
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+  }
+  .dish__card__info{
+    display: flex;
+    gap: 5px;
+  }
+  .dish__card__title{
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .dish__card__icon{
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Вівсянка з ягодами",
+    "description": "Поживний теплий сніданок з ягодами та медом",
+    "category": "сніданок",
+    "imageUrl": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=600&q=80",
+    "ingredients": [
+      { "name": "Вівсяні пластівці", "quantity": 50, "unit": "г" },
+      { "name": "Молоко або вода", "quantity": 150, "unit": "мл" },
+      { "name": "Ягоди", "quantity": 40, "unit": "г" },
+      { "name": "Мед", "quantity": 1, "unit": "ч. л." }
+    ],
+    "recipe": "Залити вівсянку молоком або водою, варити на середньому вогні 5–7 хвилин. Додати мед та прикрасити ягодами."
+  },
+  {
+    "id": 2,
+    "name": "Український борщ",
+    "description": "Класичний насичений суп з м'ясом, буряком та капустою",
+    "category": "обід",
+    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
+    "ingredients": [
+      { "name": "Яловичина або свинина", "quantity": 400, "unit": "г" },
+      { "name": "Картопля", "quantity": 3, "unit": "шт" },
+      { "name": "Буряк", "quantity": 1, "unit": "шт" },
+      { "name": "Капуста", "quantity": 200, "unit": "г" }
+    ],
+    "recipe": "Зварити бульйон з м'яса. Додати нарізану картоплю, нашатковану капусту та тушкований буряк із засмажкою. Варити до готовності."
+  },
+  {
+    "id": 3,
+    "name": "Запечена курка з овочами",
+    "description": "Легка та ароматна вечеря в духовці",
+    "category": "вечеря",
+    "imageUrl": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80",
+    "ingredients": [
+      { "name": "Куряче філе", "quantity": 400, "unit": "г" },
+      { "name": "Кабачок", "quantity": 1, "unit": "шт" },
+      { "name": "Болгарський перець", "quantity": 1, "unit": "шт" },
+      { "name": "Оливкова олія", "quantity": 2, "unit": "ст. л." }
+    ],
+    "recipe": "Нарізати філе та овочі, змастити олією зі спеціями. Запікати при 180°C близько 30 хвилин."
+  }
+]

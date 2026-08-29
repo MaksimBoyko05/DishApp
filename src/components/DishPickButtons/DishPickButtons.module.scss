@@ -1,0 +1,11 @@
+@use '../../styles/mixins' as m;
+
+.buttons__container{
+  display: flex;
+  button{
+    background-color: #038EF0;
+    border: 1px solid #038EF0;
+    color: #fff;
+    @include m.button;
+  }
+}
