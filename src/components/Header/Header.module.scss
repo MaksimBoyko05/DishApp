@@ -9,13 +9,23 @@
     display: flex;
     align-items: center;
   }
-  .button__container{
+
+  .button__container {
     display: flex;
     gap: 10px;
+
     button {
       background: #ffffff;
       @include m.button;
       border: 1px solid #dadada;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .headerwrapper {
+    .button__container {
+      display: none;
     }
   }
 }

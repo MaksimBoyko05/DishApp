@@ -1,33 +1,96 @@
 @use '../../styles/mixins' as m;
-.dish__card{
- @include m.flex-center;
+
+.dish__card {
+  @include m.flex-center;
   @include m.flex-column;
   position: relative;
+  width: 100%;
   max-width: 565px;
   background: #ffffff;
-  padding: 12px;
+  padding: 16px;
+  box-sizing: border-box;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 16px;
   gap: 16px;
-  img{
-    width: 300px;
+
+  img {
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 12px;
+    object-fit: cover;
   }
-  .dish__card__info{
+
+  .dish__card__head {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .dish__card__dinner_badge {
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #FFB74D;
+      background: #FFF3E0;
+      color: #E65100;
+    }
+
+    .dish__card_lunch_badge {
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #D8B4FE;
+      background: #F3E8FF;
+      color: #6B21A8;
+    }
+  }
+
+  .dish__card__info {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
   }
-  .dish__card__title{
+
+  .dish__card__title {
     font-weight: bold;
     font-size: 1.3rem;
+    text-align: center;
   }
-  .dish__card__icon{
+
+  .dish__card__icon {
     position: absolute;
-    left: 90%;
-    top: 5%;
-    &:hover{
+    right: 16px;
+    top: 16px;
+
+    &:hover {
       cursor: pointer;
+    }
+  }
+
+  .dish__card_recipecontainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dish__card {
+    padding: 12px;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    img {
+      max-width: 250px;
+    }
+    .dish__card__head{
+      text-align: center;
+    }
+    .dish__card__title {
+      font-size: 1.1rem;
+    }
+
+    .dish__card__icon {
+      right: 12px;
+      top: 12px;
     }
   }
 }
