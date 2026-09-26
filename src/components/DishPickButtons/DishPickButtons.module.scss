@@ -4,9 +4,28 @@
   display: flex;
   gap: 1rem;
   button{
-    background-color: #038EF0;
-    border: 1px solid #038EF0;
-    color: #fff;
+    display: flex;
+    gap: 5px;
     @include m.button;
+  }
+  .button__lunch {
+    background-color: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #e0e7ff;
+  }
+
+  .button__dinner {
+    background-color: #ecfdf5;
+    color: #059669;
+    border: 1px solid #d1fae5;
+  }
+
+  /* При наведенні */
+  .button__lunch:hover {
+    background-color: #e0e7ff;
+  }
+
+  .button__dinner:hover {
+    background-color: #d1fae5;
   }
 }

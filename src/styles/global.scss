@@ -17,7 +17,7 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
   background-color: v.$body-color;
@@ -67,5 +67,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
   line-height: 1.2;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }

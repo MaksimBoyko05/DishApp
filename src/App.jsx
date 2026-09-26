@@ -1,37 +1,23 @@
-import {useState} from 'react'
-import dishesData from './data/dishes.json'
-import {getRandomDish} from "./utils/getRandomDish.js";
-import './App.css'
-import Header from "./components/Header/Header.jsx";
-import DishPickButtons from "./components/DishPickButtons/DishPickButtons.jsx";
-import DishCard from "./components/DishCard/DishCard.jsx";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header.jsx';
+import { Home } from './pages/Home.jsx';
+import DishTable from "./pages/DishTable.jsx";
+import './App.css';
 
 function App() {
-  const [currentDish, setCurrentDish] = useState(null);
-  const [category, setCategory] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const handleRandomize = (selectedCategory) => {
-    const newDish = getRandomDish(dishesData,selectedCategory, currentDish?.id);
-    setCategory(selectedCategory);
-    setCurrentDish(newDish);
-  }
-  console.log(currentDish);
   return (
-    <div>
-      <Header/>
-      <main>
-        <div className="main__wrapper">
-          {isVisible && (
-            <DishCard onVisible={setIsVisible} dish={currentDish}/>
-          )}
-          <DishPickButtons
-            onVisible={setIsVisible}
-            onPickDish={handleRandomize}
-          />
-        </div>
-      </main>
-    </div>
-  )
+    <BrowserRouter>
+      <div>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dishes" element={<DishTable />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

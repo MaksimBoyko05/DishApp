@@ -12,6 +12,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 16px;
   gap: 16px;
+  animation: cardAppear 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   img {
     width: 100%;
@@ -19,6 +20,8 @@
     height: auto;
     border-radius: 12px;
     object-fit: cover;
+    aspect-ratio: 4/3;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   }
 
   .dish__card__head {
@@ -26,71 +29,107 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    h2 {
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .dish__description {
+      color: #666666;
+      word-break: break-word;
+    }
 
     .dish__card__dinner_badge {
-      padding: 2px 8px;
-      border-radius: 12px;
-      border: 1px solid #FFB74D;
-      background: #FFF3E0;
-      color: #E65100;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #00c9503d;
+      color: #00d256;
+      font-weight: 500;
     }
 
     .dish__card_lunch_badge {
-      padding: 2px 8px;
-      border-radius: 12px;
-      border: 1px solid #D8B4FE;
-      background: #F3E8FF;
-      color: #6B21A8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #615fff3d;
+      color: #615fff;
+      font-weight: 500;
     }
+  }
+
+  .dish__ingredients_container {
+    width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 4px;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .dish__card__info {
     display: flex;
-    gap: 5px;
+    gap: 6px;
     flex-wrap: wrap;
+    margin-bottom: 4px;
   }
 
   .dish__card__title {
     font-weight: bold;
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px 0 6px;
+    text-align: left;
+  }
+
+  .dish__card_recipecontainer {
+    width: 100%;
+    margin-top: 8px;
+
+    p {
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
   }
 
   .dish__card__icon {
     position: absolute;
     right: 16px;
     top: 16px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .dish__card_recipecontainer {
-    width: 100%;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 768px) {
   .dish__card {
-    padding: 12px;
-    max-height: 80vh;
-    overflow-y: auto;
+    padding: 14px;
+    max-height: 90vh; /* Замість фіксованих 600px */
+    overflow: hidden;
 
     img {
-      max-width: 250px;
+      max-width: 200px;
     }
-    .dish__card__head{
-      text-align: center;
-    }
-    .dish__card__title {
-      font-size: 1.1rem;
+
+    .dish__ingredients_container {
+      max-height: 200px;
     }
 
     .dish__card__icon {
       right: 12px;
       top: 12px;
     }
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
